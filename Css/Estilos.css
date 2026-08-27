@@ -1,0 +1,151 @@
+
+    :root {
+    --primary-color: #0056b3;
+    --secondary-color: #00a896;
+    --dark-color: #1d2d44;
+    --light-color: #f8f9fa;
+    --text-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+    color: #ffffff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+section {
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    color: var(--dark-color);
+    margin: 1rem 0 0.5rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.imagen-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.imagen-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background-color: var(--light-color);
+    padding: 1.2rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.ejemplo-box {
+    background-color: #eef4f8;
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e0e0e0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    color: #c7254e;
+    font-weight: bold;
+}
+
+.ejemplo-box code {
+    background-color: transparent;
+    font-size: 1.05rem;
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+

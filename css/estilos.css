@@ -146,9 +146,9 @@ footer {
     padding: 1.5rem 0;
     margin-top: 2rem;
     font-size: 0.9rem;
-    code {
+  }
+code {
   word-break: break-all;
   overflow-wrap: break-word;
-    }
-    
-  }
+}
+

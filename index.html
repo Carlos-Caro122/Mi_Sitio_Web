@@ -4,83 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPv6: Características y Direccionamiento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>IPv6: El Futuro de la Red</h1>
-            <p>Protocolo de Internet Versión 6: Características y Esquema de Direccionamiento</p>
+        <div class="container header-content">
+            <div class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">IPv6 Standard</span>
+            </div>
+            <div class="header-titles">
+                <h1>IPv6: El Futuro del Enrutamiento Global</h1>
+                <p class="estudiante">Estudiante: Carlos Caro</p>
+            </div>
         </div>
     </header>
 
     <main class="container">
+
+        <section id="presentacion">
+            <h2>Presentación del Proyecto</h2>
+            <p>El Protocolo de Internet versión 6 representa la evolución crítica de la arquitectura fundamental de la red global. Este documento abarca la estructura, el direccionamiento y la implementación práctica requerida para responder a la creciente demanda de conectividad mundial.</p>
+            <figure class="imagen-container">
+                <img src="img/red-global-ipv6.png" alt="Conectividad global e interconexión con IPv6">
+                <figcaption>Figura 1: Representación de la infraestructura de red global interconectada mediante el protocolo IPv6.</figcaption>
+            </figure>
+        </section>
+
         <section id="introduccion">
-            <h2>¿Qué es IPv6?</h2>
-            <p>IPv6 es la actualización del protocolo IP diseñada para reemplazar a IPv4. Su desarrollo responde a la limitación de direcciones de 32 bits de su predecesor, permitiendo conectar billones de nuevos dispositivos a Internet con mayor seguridad y eficiencia.</p>
-            
-            <div class="imagen-container">
-                <img src="img/red-global-ipv6.png" alt="Conectividad global con IPv6">
-            </div>
+            <h2>Introducción y Contexto</h2>
+            <p>El Protocolo de Internet Versión 6 (IPv6) es el estándar de capa de red diseñado por el IETF (Internet Engineering Task Force) para reemplazar a IPv4, cuyo esquema original de 32 bits agotó sus direcciones utilizables debido a la expansión masiva de dispositivos móviles y dispositivos IoT.</p>
+            <p><strong>¿Por qué es importante?</strong> Sin IPv6, el crecimiento de la red global se detendría. Este protocolo no solo amplía el espacio de direcciones a un nivel prácticamente inagotable, sino que resuelve falencias estructurales en el procesamiento de paquetes, la seguridad en la transmisión y la autoconfiguración de nodos sin depender de intervención manual.</p>
         </section>
 
-        <section id="caracteristicas">
-            <h2>Características Principales</h2>
-            <div class="cards-grid">
-                <article class="card">
-                    <h3>Espacio Masivo de Direcciones</h3>
-                    <p>Usa 128 bits para ofrecer aproximadamente 3.4 x 10^38 direcciones únicas, eliminando la necesidad de NAT.</p>
-                </article>
+        <section id="desarrollo">
+            <h2>Desarrollo y Conceptos Clave</h2>
+            <p>IPv6 redefine la forma en que los datos se encapsulan y transmiten a través de los enrutadores de la red central. A diferencia de su predecesor, elimina la fragmentación en enrutadores intermedios, delegando esta tarea a los hosts emisores mediante el descubrimiento del MTU de la ruta (PMTUD).</p>
 
-                <article class="card">
-                    <h3>Seguridad Integrada (IPsec)</h3>
-                    <p>Incluye soporte nativo para cifrado y autenticación de datos desde la capa de red.</p>
-                </article>
-
-                <article class="card">
-                    <h3>Configuración Automática</h3>
-                    <p>Implementa SLAAC (Stateless Address Autoconfiguration), permitiendo que los dispositivos se autoconfiguren sin servidor DHCP.</p>
-                </article>
-
-                <article class="card">
-                    <h3>Cabecera Simplificada</h3>
-                    <p>Optimiza el procesamiento en los enrutadores al reducir campos innecesarios frente a IPv4.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="direccionamiento">
-            <h2>Esquema de Direccionamiento</h2>
-            <p>Las direcciones IPv6 están compuestas por 128 bits divididos en 8 grupos de 16 bits, expresados en formato hexadecimal y separados por dos puntos (<code>:</code>).</p>
-            
-            <div class="imagen-container">
-                <img src="img/direccionamiento-ipv6.png" alt="Esquema de direccionamiento IPv6 de 128 bits">
-            </div>
-
-            <div class="ejemplo-box">
-                <p><strong>Ejemplo de Dirección IPv6 Completa:</strong></p>
-                <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>
-            </div>
-
-            <h3>Reglas de Simplificación</h3>
+            <h3>Componentes del Protocolo</h3>
             <ul>
-                <li><strong>Omitir ceros a la izquierda:</strong> <code>0db8</code> se reduce a <code>db8</code>.</li>
-                <li><strong>Compresión de ceros (::):</strong> Un grupo contiguo de secciones compuestas por ceros puede reemplazarse por <code>::</code> (aplicable solo una vez por dirección).</li>
+                <li><strong>Cabecera fija de 40 bytes:</strong> Estructura optimizada que acelera el procesamiento del hardware en los enrutadores.</li>
+                <li><strong>Campos de extensión:</strong> Permiten añadir opciones de seguridad o enrutamiento solo cuando se requieren, sin sobrecargar la cabecera base.</li>
+                <li><strong>Protocolo ICMPv6:</strong> Integra funciones clave como la resolución de direcciones de capa de enlace (NDP) y el descubrimiento de enrutadores.</li>
+            </ul>
+
+            <h3>Comparativa: IPv4 vs IPv6</h3>
+            <div class="tabla-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>IPv4</th>
+                            <th>IPv6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tamaño de dirección</strong></td>
+                            <td>32 bits (4.3 mil millones)</td>
+                            <td>128 bits (3.4 × 10³⁸)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Formato</strong></td>
+                            <td>Decimal punteado (ej. 192.168.1.1)</td>
+                            <td>Hexadecimal separado por `:` (ej. 2001:db8::1)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Configuración de red</strong></td>
+                            <td>Manual o mediante DHCPv4</td>
+                            <td>Autoconfiguración SLAAC o DHCPv6</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Seguridad (IPsec)</strong></td>
+                            <td>Opcional / Añadido posteriormente</td>
+                            <td>Soporte integrado en el protocolo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Traducción NAT</strong></td>
+                            <td>Requerido para ahorrar direcciones</td>
+                            <td>Innecesario (Conexión punto a punto directa)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="casos-practicos">
+            <h2>Ejemplos y Casos Prácticos</h2>
+            <p>En entornos reales de proveedores de servicios de Internet (ISP) y redes corporativas, el esquema de direccionamiento se aplica dividiendo los 128 bits en bloques jerárquicos: Prefijo de Red Global, ID de Subred e ID de Interfaz.</p>
+            
+            <figure class="imagen-container">
+                <img src="img/direccionamiento-ipv6.png" alt="Desglose del esquema de direccionamiento IPv6 de 128 bits">
+                <figcaption>Figura 2: Estructura técnica de un bloque IPv6 dividido en bloques hexadecimales de 16 bits.</figcaption>
+            </figure>
+
+            <h3>Aplicación de Reglas de Simplificación</h3>
+            <p>Para simplificar las direcciones de 128 bits escritas en formato hexadecimal, se aplican dos reglas estándar:</p>
+            <ul>
+                <li><strong>Omitir ceros a la izquierda:</strong> En cualquier grupo individual de 16 bits, los ceros iniciales pueden descartarse. Por ejemplo, <code>0db8</code> se escribe <code>db8</code>.</li>
+                <li><strong>Compresión mediante doble dos puntos (::):</strong> Un bloque consecutivo de grupos compuestos exclusivamente por ceros se reemplaza por <code>::</code>. Esta regla solo se puede usar una vez por dirección.</li>
             </ul>
 
             <div class="ejemplo-box">
-                <p><strong>Dirección Simplificada:</strong></p>
+                <p><strong>Dirección Completa (128 bits):</strong></p>
+                <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>
+                <p><strong>Dirección Simplificada Aplicando Reglas:</strong></p>
                 <code>2001:db8:85a3::8a2e:370:7334</code>
             </div>
         </section>
+
+        <section id="conclusiones">
+            <h2>Conclusiones</h2>
+            <p>La transición hacia IPv6 no es simplemente una actualización opcional, sino una necesidad imperativa para garantizar la sostenibilidad operativa de la red mundial. Las arquitecturas modernas requieren soportar la demanda masiva de servicios en la nube, redes 5G y sistemas automatizados que exigen direccionamiento directo.</p>
+            <p>La implementación de IPv6 elimina la complejidad y los cuellos de botella introducidos por las tecnologías NAT en IPv4, restaurando el principio de extremo a extremo en las comunicaciones, reduciendo la latencia y elevando los estándares de seguridad integrada en la industria actual.</p>
+        </section>
+
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Producción Multimedial - Proyecto IPv6</p>
+            <p>Todos los derechos reservados &copy; 2026 | Carlos Caro | Producción Multimedial</p>
         </div>
     </footer>
 
 </body>
-</html>
+    </html>
+    

@@ -1,9 +1,10 @@
 :root {
-    --primary-color: #0056b3;
-    --secondary-color: #00a896;
+    --bg-color: #f5f5f5;
+    --card-bg: #ffffff;
+    --primary-color: #0077cc;
     --dark-color: #1d2d44;
-    --light-color: #f8f9fa;
     --text-color: #333333;
+    --border-color: #dddddd;
 }
 
 * {
@@ -13,34 +14,62 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--light-color);
+    background-color: var(--bg-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 header {
     background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
     color: #ffffff;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
 header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
 }
 
-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+.estudiante {
+    font-size: 1rem;
+    opacity: 0.95;
+    font-weight: 500;
 }
 
 main {
@@ -48,24 +77,24 @@ main {
 }
 
 section {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
     color: var(--primary-color);
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
     display: inline-block;
     padding-bottom: 0.3rem;
 }
 
 h3 {
     color: var(--dark-color);
-    margin: 1rem 0 0.5rem 0;
+    margin: 1.5rem 0 0.8rem 0;
 }
 
 p {
@@ -74,7 +103,7 @@ p {
 
 ul {
     margin-left: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 li {
@@ -83,7 +112,7 @@ li {
 
 .imagen-container {
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 1.8rem 0;
 }
 
 .imagen-container img {
@@ -93,50 +122,66 @@ li {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
+figcaption {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 0.5rem;
+    font-style: italic;
 }
 
-.card {
-    background-color: var(--light-color);
-    padding: 1.2rem;
-    border-radius: 6px;
-    border-left: 4px solid var(--secondary-color);
+.tabla-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
 }
 
-.card h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
 }
 
-.card p {
+th, td {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    text-align: left;
     font-size: 0.95rem;
-    margin-bottom: 0;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 .ejemplo-box {
-    background-color: #eef4f8;
+    background-color: #eef7ff;
     border-left: 4px solid var(--primary-color);
-    padding: 1rem;
-    margin: 1rem 0;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
     border-radius: 4px;
 }
 
 code {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #e0e0e0;
+    background-color: #e8e8e8;
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
     color: #c7254e;
     font-weight: bold;
+    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
 .ejemplo-box code {
-    background-color: transparent;
-    font-size: 1.05rem;
+    display: block;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
 }
 
 footer {
@@ -146,9 +191,4 @@ footer {
     padding: 1.5rem 0;
     margin-top: 2rem;
     font-size: 0.9rem;
-  }
-code {
-  word-break: break-all;
-  overflow-wrap: break-word;
 }
-
